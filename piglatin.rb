@@ -19,10 +19,13 @@ sentencearray.each do |word|
 	else
 		i = 0
 		vowelindex = 0
-		until (vowelindex != 0 && vowelindex != nil)
-			vowelindex = word.index(vowels[i])
+		while i < word.length && vowelindex == 0
+			if vowels.include? word[i].downcase
+				vowelindex = i
+			end
 			i += 1
 		end
+		puts vowelindex
 		firstpart = word[vowelindex..word.length]
 		secondpart = word[0..vowelindex-1] + "ay"
 		word = (firstpart + secondpart).downcase
