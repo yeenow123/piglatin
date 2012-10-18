@@ -49,5 +49,3 @@ sentencearray.each do |word|
 end
 
 puts newsent.join(" ")
-
-puts "ooohhh yaaaaa"
